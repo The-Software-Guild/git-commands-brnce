@@ -2,101 +2,136 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class RockPaperScissors {
+
     public static void main(String[] args) {
+        Scanner playerChoice = new Scanner(System.in);
+        Random random = new Random();
 
-        Scanner scanner = new Scanner(System.in);
-
+        int winCounter = 0;
+        int lossCounter = 0;
+        int tieCounter = 0;
         int timesPlayed = 10;
-        System.out.println("Let's play ROCK - PAPER - SCISSORS");
-        System.out.println("How many rounds of Rock-Paper-Scissors would you like to play? (1-10)");
-        int rounds = Integer.parseInt(scanner.nextLine());
 
-        if (rounds > timesPlayed) {
-            System.out.println("Invalid: You can only play a maximum of 10 rounds");
-            System.exit(0);
-        } else getGameMoves();
+        while (true) {
 
-        for (int i = 1; i < rounds; i++) {
-            getGameMoves();
-        }
-    }
+            System.out.println("");
+            System.out.println("Let's play ROCK - PAPER - SCISSORS\n");
+            System.out.println("How many rounds of Rock-Paper-Scissors would you like to play? (1-10)");
+            int rounds = playerChoice.nextInt();
 
-    public static void getGameMoves() {
 
-        int rock = 0;
-        int paper = 1;
-        int scissors = 2;
-
-        // Getting input from the user
-        Scanner number = new Scanner(System.in);
-        System.out.println("Make a move! Hint: 0 = Rock, 1 = Paper, 2 = Scissors");
-
-        int playerMove = Integer.parseInt(number.nextLine());
-
-        //if user chooses above 2
-        while (playerMove > 2) {
-            System.out.println("Invalid: Choose a number between 0 and 2");
-            playerMove = number.nextInt();
-        }
-
-//        while (true) {
-//            System.out.println("Would you like to play again? Answer (y/n)\n");
-//            String answer = number.nextLine();
-//            if (answer.equals("y")) {
-//                System.out.println("Great! let's go!");
-//            } else if (answer.equals("n")) {
-//                System.out.println("Thanks for playing!");
-//                System.exit(0);
-//            } else {
-//                System.out.println("Invalid response: Please try again.");
-//            }
-
-            if (playerMove == rock) {
-                System.out.println("You chose: Rock");
-            } else if (playerMove == paper) {
-                System.out.println("You chose: Paper");
-            } else {
-                System.out.println("You chose: Scissors");
+            if (rounds > timesPlayed) {
+                System.out.println("Invalid: You can only play a maximum of 10 rounds");
+                System.exit(0);
+                break;
             }
 
-
-            // generating computer moves using random
-            Random random = new Random();
-            int computerMove = random.nextInt(3);
-
-            // Getting input from computer
-            if (computerMove == rock) {
-                System.out.println("Computer chose: Rock");
-            } else if (computerMove == paper) {
-                System.out.println("Computer chose: Paper");
-            } else {
-                System.out.println("Computer chose: Scissors");
-            }
-
-            // Print results
-            if (computerMove == rock) {
-                if (playerMove == paper) {
-                    System.out.println("You win!");
-                } else {
-                    System.out.println("Computer Wins");
+            for (int i = 0; i < rounds; i++) {
+                System.out.println("Make a move! Hint: Type = 1 = Rock, 2 = Paper, 3 = Scissors");
+                int playerMove = playerChoice.nextInt();
+                switch (playerMove) {
+                    case 1:
+                        playerMove = 1;
+                        System.out.println("You chose: Rock");
+                        break;
+                    case 2:
+                        playerMove = 2;
+                        System.out.println("You chose: Paper");
+                        break;
+                    case 3:
+                        playerMove = 3;
+                        System.out.println("You chose: Scissors");
+                        break;
                 }
-            } else if (computerMove == paper) {
-                if (playerMove == rock) {
-                    System.out.println("Computer Wins");
-                } else {
-                    System.out.println("You Win!");
-                }
-            } else if (playerMove == rock) {
-                System.out.println("You Win");
-            } else {
-                System.out.println("Computer Wins");
-            }
-            if (playerMove == computerMove) {
-                System.out.println("That's a tie");
-            }
-        }
-    }
 
+                if (playerMove > 3 && playerMove < 1) {
+                    System.out.println("Invalid: Choose a number between 0 and 2");
+                    playerMove = playerChoice.nextInt();
+                }
+
+
+                int computerMove = random.nextInt(2) + 1;
+
+                // Getting input from computer
+                if (computerMove == 1) {
+                    System.out.println("Computer chose: Rock");
+                } else if (computerMove == 2) {
+                    System.out.println("Computer chose: Paper");
+                } else {
+                    System.out.println("Computer chose: Scissors");
+                }
+
+                if (computerMove == 2 && playerMove == 1) {
+                    System.out.println("Computer Wins!" + "\n");
+                    ++lossCounter;
+                }
+                if (playerMove == 2 && computerMove == 1) {
+                    System.out.println("You Win!" + "\n");
+                    ++winCounter;
+                }
+                if (playerMove == 1 && computerMove == 1) {
+                    System.out.println("Its a Tie!" + "\n");
+                    ++tieCounter;
+                }
+                if (playerMove == 2 && computerMove == 2) {
+                    System.out.println("Its a Tie!" + "\n");
+                    ++tieCounter;
+                }
+                if (playerMove == 3 && computerMove == 3) {
+                    System.out.println("Its a Tie!" + "\n");
+                    ++tieCounter;
+                }
+                if (playerMove == 3 && computerMove == 2) {
+                    System.out.println("You Win!" + "\n");
+                    ++winCounter;
+                }
+                if (playerMove == 2 && computerMove == 3) {
+                    System.out.println("Computer Wins!" + "\n");
+                    ++lossCounter;
+                }
+                if (playerMove == 1 && computerMove == 3) {
+                    System.out.println("You Win!" + "\n");
+                    ++winCounter;
+                }
+                if (playerMove == 3 && computerMove == 1) {
+                    System.out.println("Computer Wins!" + "\n");
+                    ++lossCounter;
+                }
+
+            }
+            break;
+
+        }
+
+        if (winCounter > lossCounter) {
+            System.out.println("You Win! " + lossCounter + "\n");
+        }
+        if (winCounter < lossCounter) {
+            System.out.println("You Lose! " + winCounter + "\n");
+        } else {
+            System.out.println("You Tied! " + tieCounter + "\n");
+        }
+
+        System.out.println("");
+        System.out.println("You tied in " + tieCounter + " rounds!");
+        System.out.println("You won in " + winCounter + " rounds!");
+        System.out.println("You lost in " + lossCounter + " rounds!");
+        System.out.println("");
+
+
+        Scanner playAgain = new Scanner(System.in);
+        System.out.println("Would you like to play again? (y/n)");
+        String answer = playAgain.nextLine();
+
+        if (answer.equals("y")) {
+            System.out.println("Great! let's go!");
+            playerChoice.nextLine();
+//            System.out.println(playerChoice);
+        } else if (answer.equals("n"))
+            System.out.println("Thanks for playing!");
+        System.exit(0);
+    }
+}
 
 
 
