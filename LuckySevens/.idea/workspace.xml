@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab632880-68fa-42f1-a05a-c5d779358803" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/LuckySevens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticeProgramming/src/main/java/com/sg/foundations/flowcontrol/arrays/ARainbow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticeProgramming/src/main/java/com/sg/foundations/flowcontrol/arrays/FruitsBasket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticeProgramming/src/main/java/com/sg/foundations/flowcontrol/arrays/StillPositive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticeProgramming/src/main/java/com/sg/foundations/flowcontrol/methods/BarelyControlledChaos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticeProgramming/src/main/java/com/sg/foundations/flowcontrol/methods/MatchWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticeProgramming/src/main/java/com/sg/foundations/flowcontrol/methods/MethodToTheMadness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticeProgramming/src/main/java/com/sg/foundations/flowcontrol/methods/ReturnToSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LuckySevens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LuckySevens.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +38,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/berniceesiemot/git-commands-brnce/LuckySevens&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />

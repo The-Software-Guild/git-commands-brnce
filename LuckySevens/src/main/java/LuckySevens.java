@@ -4,33 +4,45 @@ import java.util.Scanner;
 public class LuckySevens {
     public static void main(String[] args) {
 
-        int dollars;
-        int winNumber = 7;
-
-        String stringDollars;
-
         Random number = new Random();
-
         Scanner myScanner = new Scanner(System.in);
+        int dollars;
+        int count = 0;
+        int dollarsPerLoop = 0;
+
+        String stringDollars = "";
+
 
         System.out.println("How many dollars do you have to bet?");
-        stringDollars = myScanner.nextLine();
+        dollarsPerLoop = myScanner.nextInt();
+
 
         System.out.println("You have $" + stringDollars + " to bet");
 
-        int num1 = number.nextInt(1, 10);
-        int num2 = number.nextInt(1, 10);
 
-        System.out.println("1st Random Number: " + num1);
-        System.out.println("2nd Random Number: " + num2);
+        for (int i = 1; i <= 100; i++) {
+            // Initialize variables with each loop
+            dollars = dollarsPerLoop;
+            while (dollars > 0) {
+                count++;
 
-        if (num1 + num2 == winNumber) {
-            System.out.println("Congratulations you win $4");
-        } else System.out.println("To bad! you lose $1");
+                // Roll the dice.
+                int num1 = number.nextInt(6) + 1;
+                int num2 = number.nextInt(6) + 1;
 
-        if (nu)
+                // Calculate the winnings or losses
+                if (num1 + num2 == 7) {
+                    // dollars += 4;
+                    System.out.println("Congratulations you win $4");
+                    System.out.println("You are broke after " + dollarsPerLoop + " rolls.\n");
+                } else if (num1 + num2 != 7) {
+                    System.out.println("To bad! you lose $1");
+                }
 
+            }
 
+        }
     }
 }
+
 
