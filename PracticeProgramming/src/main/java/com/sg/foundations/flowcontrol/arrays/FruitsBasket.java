@@ -15,7 +15,35 @@ public class FruitsBasket {
         int numOranges = 0;
         int numApples = 0;
         int numOtherFruit = 0;
+        int count = 0;
 
+        // counts the total number of fruits in the array
+        for (String i: fruitBasket) {
+            count++;
+
+            // counts the number of specified fruits in the array list
+           if (i.equals("Orange")) {
+                numOranges++;
+            }
+            if (i.equals("Apple")) {
+                numApples++;
+            }
+            if (i.equals("Kiwi")) {
+                numOtherFruit++;
+            } else if (i.equals("Banana")){
+                numOtherFruit++;
+            } else if (i.equals("Dragonfruit")){
+                numOtherFruit++;
+            } else if (i.equals("PawPaw")){
+                numOtherFruit++;
+            }
+        }
+
+        // prints the results
+        System.out.println("Total number of Fruit in Basket: " + count);
+        System.out.println("Number of Apples: " + numApples);
+        System.out.println("Number of Oranges: " + numOranges);
+        System.out.println("Number of Other Fruit: " + numOtherFruit);
 
 
 

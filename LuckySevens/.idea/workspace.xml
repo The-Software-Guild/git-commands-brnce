@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab632880-68fa-42f1-a05a-c5d779358803" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../InterestCalculator/src/main/java/InterestCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../InterestCalculator/src/main/java/InterestCalculator.java" afterDir="false" />
+    <list default="true" id="ab632880-68fa-42f1-a05a-c5d779358803" name="Changes" comment="&quot;updated&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LuckySevens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LuckySevens.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +59,14 @@
       <option name="presentableId" value="Default" />
       <updated>1665664366773</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;updated&quot;">
+      <created>1666168821908</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666168821908</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,5 +79,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;updated&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;updated&quot;" />
   </component>
 </project>

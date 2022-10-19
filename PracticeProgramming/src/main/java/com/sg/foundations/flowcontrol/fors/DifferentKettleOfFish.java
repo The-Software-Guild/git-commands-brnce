@@ -12,7 +12,6 @@ public class DifferentKettleOfFish {
             } else{
                 System.out.println(fish + " fish!");
             }
-
             fish++;
         }
 
