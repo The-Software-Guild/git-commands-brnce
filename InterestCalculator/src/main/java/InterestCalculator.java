@@ -12,17 +12,17 @@ public class InterestCalculator {
         // Ask user how much they want to invest
         System.out.println("How much do you want to invest? ");
 
-        investMoney = input.nextFloat();
+        investMoney = input.nextDouble();
 
         // Ask user how many years they want to invest
         System.out.println("How many years are you investing? ");
 
-        annualInterestRate = input.nextFloat();
+        annualInterestRate = input.nextDouble();
 
         // Ask user for their annual interest rate % growth
         System.out.println("What is the annual interest rate % growth? ");
 
-        yearsOfInvesting = input.nextFloat();
+        yearsOfInvesting = input.nextDouble();
 
 
         // finding the investment money at the beginning of the year
